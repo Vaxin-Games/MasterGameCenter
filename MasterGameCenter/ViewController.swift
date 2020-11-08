@@ -55,11 +55,23 @@ class ViewController: UIViewController {
         let request = GKMatchRequest()
         request.minPlayers = 2
         request.maxPlayers = 4
-        request.inviteMessage = "Master Game Center match request test"
+        request.inviteMessage = "Master Game Center turn based game request"
         request.recipientResponseHandler = { player, response in
             self.updateUI(for: player, accepted: response == .accepted)
         }
         let vc = GKTurnBasedMatchmakerViewController(matchRequest: request)
+        present(vc, animated: true)
+    }
+    
+    @IBAction func createRealtimeGame(){
+        let request = GKMatchRequest()
+        request.minPlayers = 2
+        request.maxPlayers = 4
+        request.inviteMessage = "Master Game Center real time game request"
+        request.recipientResponseHandler = { player, response in
+            self.updateUI(for: player, accepted: response == .accepted)
+        }
+        let vc = GKMatchmakerViewController(matchRequest: request)!
         present(vc, animated: true)
     }
     
@@ -73,7 +85,7 @@ class ViewController: UIViewController {
     
     func updateUI(for player: GKPlayer, accepted: Bool) {
         // update your UI here
-        print ("Update UI...")
+        GKNotificationBanner.show(withTitle: "Game request", message: "Acceptation de \(player.displayName): \(accepted)", completionHandler: nil)
     }
     
 }

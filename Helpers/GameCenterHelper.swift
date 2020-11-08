@@ -62,7 +62,7 @@ final class GameCenterHelper: NSObject {
         // Other init procedures
     }
     // Other class functions
-    
+    /*
     func presentMatchmaker() {
       // 1
       guard GKLocalPlayer.local.isAuthenticated else {
@@ -82,6 +82,7 @@ final class GameCenterHelper: NSObject {
       GameCenterHelper.helper.presentMatchmaker()
       viewController?.present(vc, animated: true)
     }
+     */
 }
 
 //Notify app of Game Center connection
