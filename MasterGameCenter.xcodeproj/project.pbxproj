@@ -13,6 +13,8 @@
 		A2F78E912557A562001F5E67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F78E8F2557A562001F5E67 /* Main.storyboard */; };
 		A2F78E932557A563001F5E67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F78E922557A563001F5E67 /* Assets.xcassets */; };
 		A2F78E962557A563001F5E67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F78E942557A563001F5E67 /* LaunchScreen.storyboard */; };
+		A2F78EA52557A874001F5E67 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F78EA42557A874001F5E67 /* GameKit.framework */; };
+		A2F78EA82557AA61001F5E67 /* GameCenterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F78EA72557AA61001F5E67 /* GameCenterHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A2F78E922557A563001F5E67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2F78E952557A563001F5E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2F78E972557A563001F5E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2F78EA42557A874001F5E67 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		A2F78EA72557AA61001F5E67 /* GameCenterHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F78EA52557A874001F5E67 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				A2F78E882557A562001F5E67 /* MasterGameCenter */,
 				A2F78E872557A562001F5E67 /* Products */,
+				A2F78E9E2557A59A001F5E67 /* Helpers */,
+				A2F78EA32557A874001F5E67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +72,22 @@
 				A2F78E972557A563001F5E67 /* Info.plist */,
 			);
 			path = MasterGameCenter;
+			sourceTree = "<group>";
+		};
+		A2F78E9E2557A59A001F5E67 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A2F78EA72557AA61001F5E67 /* GameCenterHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A2F78EA32557A874001F5E67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2F78EA42557A874001F5E67 /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F78EA82557AA61001F5E67 /* GameCenterHelper.swift in Sources */,
 				A2F78E8E2557A562001F5E67 /* ViewController.swift in Sources */,
 				A2F78E8A2557A562001F5E67 /* AppDelegate.swift in Sources */,
 				A2F78E8C2557A562001F5E67 /* SceneDelegate.swift in Sources */,
