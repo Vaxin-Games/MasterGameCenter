@@ -59,15 +59,36 @@ class ViewController: UIViewController {
     }
 
     @IBAction func click() {
-        
+               
         // Test GK var
-        print (GKLocalPlayer.local.isAuthenticated)
+        var message:String = ""
+
+        message = "Player \(GKLocalPlayer.local.displayName) authetication status: \(GKLocalPlayer.local.isAuthenticated)"
+        print (message)
         
         // Toggle Access Point
         GKAccessPoint.shared.isActive = !GKAccessPoint.shared.isActive
         
         // Send Notification
-        GKNotificationBanner.show(withTitle: "Master Game Center", message: "Master Game Center is notifing every player to come back...", completionHandler: nil)
+        GKNotificationBanner.show(withTitle: "Master Game Center", message: "\(message)", completionHandler: nil)
+        
+        // Match Request
+        invite()
     }
+    
+    func invite() {
+        let request = GKMatchRequest()
+        request.minPlayers = 2
+        request.maxPlayers = 4
+        request.inviteMessage = "Master Game Center match request test"
+        request.recipientResponseHandler = { player, response in
+            self.updateUI(for: player, accepted: response == .accepted)
+        }
+    }
+
+    func updateUI(for player: GKPlayer, accepted: Bool) {
+        // update your UI here
+    }
+    
 }
 
