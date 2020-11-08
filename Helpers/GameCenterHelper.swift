@@ -62,6 +62,8 @@ final class GameCenterHelper: NSObject {
         // Other init procedures
     }
     // Other class functions
+    
+    
 }
 
 //Notify app of Game Center connection
@@ -69,3 +71,4 @@ extension Notification.Name {
   static let presentGame = Notification.Name(rawValue: "presentGame")
   static let authenticationChanged = Notification.Name(rawValue: "authenticationChanged")
 }
+

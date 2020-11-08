@@ -17,11 +17,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ac-ah-Aos">
-                                <rect key="frame" x="111" y="318" width="153" height="30"/>
+                                <rect key="frame" x="102" y="155" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Connect Game Center"/>
+                                <state key="normal" title="Toggle GameCenter Icon"/>
                                 <connections>
                                     <action selector="click" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ftb-JV-dyW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaq-yB-Dtj">
+                                <rect key="frame" x="121" y="214" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send Notification"/>
+                                <connections>
+                                    <action selector="notify" destination="BYZ-38-t0r" eventType="touchUpInside" id="XeJ-Qb-DsL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbu-8X-mI6">
+                                <rect key="frame" x="135" y="275" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create Game"/>
+                                <connections>
+                                    <action selector="createGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="lg6-HU-Ltb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kp-WM-3eU">
+                                <rect key="frame" x="149" y="340" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share Data"/>
+                                <connections>
+                                    <action selector="shareData" destination="BYZ-38-t0r" eventType="touchUpInside" id="yU1-qy-w8D"/>
                                 </connections>
                             </button>
                         </subviews>
