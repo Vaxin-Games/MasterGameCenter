@@ -71,18 +71,11 @@ class ViewController: UIViewController {
         present(profileVC, animated: true, completion: nil)
     }
     
-
     func updateUI(for player: GKPlayer, accepted: Bool) {
         // update your UI here
         print ("Update UI...")
-        
-        
-        
     }
     
 }
 
-class GKMatchmakerViewController : UINavigationController{
-    
-}
 
